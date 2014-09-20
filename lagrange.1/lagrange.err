@@ -1,0 +1,11 @@
+lagrange.for(27): *ERR* SV-05 column 48, using array name incorrectly without list
+lagrange.for(36): *ERR* ST-17 column 10, undecodeable statement or misspelled word PROGRAM
+lagrange.for(38): *ERR* ST-11 specification statement appears too late
+lagrange.for(39): *ERR* ST-11 specification statement appears too late
+lagrange.for(40): *ERR* ST-11 specification statement appears too late
+lagrange.for(41): *ERR* SV-05 column 7, using FUNCTION name incorrectly without list
+lagrange.for(44): *ERR* SV-05 column 7, using FUNCTION name incorrectly without list
+lagrange.for(44): *ERR* SV-05 column 17, using FUNCTION name incorrectly without list
+lagrange.for: *WRN* VA-07 in FMAIN, M has been used but not defined
+lagrange.for: *WRN* VA-07 in FMAIN, X has been used but not defined
+lagrange.for: *WRN* VA-05 in FMAIN, ZNAMENATEL is an unreferenced symbol

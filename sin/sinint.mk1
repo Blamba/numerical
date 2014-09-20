@@ -1,0 +1,22 @@
+!define BLANK ""
+C:\Users\T05-32\Documents\sinint.obj : C:\Users\T05-32\Documents\sinint.for &
+.AUTODEPEND
+ @C:
+ cd C:\Users\T05-32\Documents
+ wfc386 sinint.for -d2 -q -dep
+
+C:\Users\T05-32\Documents\sinint.exe : C:\Users\T05-32\Documents\sinint.obj &
+.AUTODEPEND
+ @C:
+ cd C:\Users\T05-32\Documents
+ @%write sinint.lk1 FIL sinint.obj
+ @%append sinint.lk1 
+!ifneq BLANK ""
+ *wlib -q -n -b sinint.imp 
+ @%append sinint.lk1 LIBR sinint.imp
+!endif
+!ifneq BLANK ""
+ @%append sinint.lk1 op resource=
+!endif
+ *wlink name sinint d all SYS nt op m op maxe=25 op q op symf @sinint.lk1
+

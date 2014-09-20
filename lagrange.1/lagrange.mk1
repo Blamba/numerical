@@ -1,0 +1,23 @@
+!define BLANK ""
+C:\Users\T05-32\Documents\GitHub\lagrange.obj : C:\Users\T05-32\Documents\Gi&
+tHub\lagrange.for .AUTODEPEND
+ @C:
+ cd C:\Users\T05-32\Documents\GitHub
+ wfc386 lagrange.for -d2 -q -dep
+
+C:\Users\T05-32\Documents\GitHub\lagrange.exe : C:\Users\T05-32\Documents\Gi&
+tHub\lagrange.obj .AUTODEPEND
+ @C:
+ cd C:\Users\T05-32\Documents\GitHub
+ @%write lagrange.lk1 FIL lagrange.obj
+ @%append lagrange.lk1 
+!ifneq BLANK ""
+ *wlib -q -n -b lagrange.imp 
+ @%append lagrange.lk1 LIBR lagrange.imp
+!endif
+!ifneq BLANK ""
+ @%append lagrange.lk1 op resource=
+!endif
+ *wlink name lagrange d all SYS nt op m op maxe=25 op q op symf @lagrange.lk&
+1
+
