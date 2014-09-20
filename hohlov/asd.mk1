@@ -1,0 +1,20 @@
+!define BLANK ""
+"Z:\Хохлов\asd.obj" : "Z:\ХОХЛОВ\asd.for" .AUTODEPEND
+ @Z:
+ cd Z:\Хохлов
+ wfc386 "\ХОХЛОВ\asd.for" -d2 -q -dep
+
+"Z:\Хохлов\asd.exe" : "Z:\Хохлов\asd.obj" .AUTODEPEND
+ @Z:
+ cd Z:\Хохлов
+ @%write asd.lk1 FIL asd.obj
+ @%append asd.lk1 
+!ifneq BLANK ""
+ *wlib -q -n -b asd.imp 
+ @%append asd.lk1 LIBR asd.imp
+!endif
+!ifneq BLANK ""
+ @%append asd.lk1 op resource=
+!endif
+ *wlink name asd d all SYS nt op m op maxe=25 op q op symf @asd.lk1
+

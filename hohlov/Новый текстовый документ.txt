@@ -1,0 +1,10 @@
+ program C
+        pi=4.*atan(1.)
+        H=PI/1000
+        SUMMA=0.
+        DO 1, I=1,1000
+        T=H*SIN(I*H)
+        SUMMA=SUMMA+T
+   1  continue
+        print *, SUMMA
+        end

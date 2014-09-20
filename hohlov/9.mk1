@@ -1,0 +1,20 @@
+!define BLANK ""
+Z:\Khokhlov\9.obj : Z:\Khokhlov\9.for .AUTODEPEND
+ @Z:
+ cd Z:\Khokhlov
+ wfc386 9.for -d2 -q -dep
+
+Z:\Khokhlov\9.exe : Z:\Khokhlov\9.obj .AUTODEPEND
+ @Z:
+ cd Z:\Khokhlov
+ @%write 9.lk1 FIL 9.obj
+ @%append 9.lk1 
+!ifneq BLANK ""
+ *wlib -q -n -b 9.imp 
+ @%append 9.lk1 LIBR 9.imp
+!endif
+!ifneq BLANK ""
+ @%append 9.lk1 op resource=
+!endif
+ *wlink name 9 d all SYS nt op m op maxe=25 op q op symf @9.lk1
+

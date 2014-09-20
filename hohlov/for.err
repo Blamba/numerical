@@ -1,0 +1,27 @@
+for.c(1): Error! E1022: Missing or misspelled data type near 'program'
+for.c(2): Error! E1022: Missing or misspelled data type near 'aproximate'
+for.c(2): Error! E1022: Missing or misspelled data type near 'dimension'
+for.c(2): Error! E1009: Expecting ')' but found '100'
+for.c(2): Warning! W304: Return type 'int' assumed for function 'a'
+for.c(2): Error! E1026: Invalid declarator
+for.c(2): Error! E1009: Expecting ',' but found '100'
+for.c(2): Error! E1026: Invalid declarator
+for.c(2): Error! E1009: Expecting ',' but found ')'
+for.c(2): Error! E1026: Invalid declarator
+for.c(2): Error! E1009: Expecting ')' but found '100'
+for.c(2): Error! E1024: Declared symbol 'b' is not in parameter list
+for.c(2): Error! E1009: Expecting ',' but found '100'
+for.c(2): Error! E1026: Invalid declarator
+for.c(2): Error! E1009: Expecting ',' but found ')'
+for.c(2): Error! E1026: Invalid declarator
+for.c(2): Error! E1009: Expecting ')' but found '100'
+for.c(2): Error! E1024: Declared symbol 'c' is not in parameter list
+for.c(2): Error! E1009: Expecting ',' but found '100'
+for.c(2): Error! E1026: Invalid declarator
+for.c(2): Error! E1009: Expecting ',' but found ')'
+for.c(3): Error! E1022: Missing or misspelled data type near 'real'
+for.c(3): Error! E1022: Missing or misspelled data type near 'function'
+for.c(4): Error! E1024: Declared symbol 'F' is not in parameter list
+for.c(4): Error! E1009: Expecting ',' but found 'real'
+for.c(4): Error! E1024: Declared symbol 'x0' is not in parameter list
+for.c(4): Error! E1147: Too many errors: compilation aborted

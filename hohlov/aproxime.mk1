@@ -1,0 +1,22 @@
+!define BLANK ""
+Z:\Khokhlov\for.obj : Z:\Khokhlov\for.c .AUTODEPEND
+ @Z:
+ cd Z:\Khokhlov
+ *wcc386 for.c -i=C:\WATCOM\h;C:\WATCOM\h\nt -w4 -e25 -zq -od -d2 -6r -bt=nt&
+ -mf
+
+Z:\Khokhlov\aproxime.exe : Z:\Khokhlov\for.obj .AUTODEPEND
+ @Z:
+ cd Z:\Khokhlov
+ @%write aproxime.lk1 FIL for.obj
+ @%append aproxime.lk1 
+!ifneq BLANK ""
+ *wlib -q -n -b aproxime.imp 
+ @%append aproxime.lk1 LIBR aproxime.imp
+!endif
+!ifneq BLANK ""
+ @%append aproxime.lk1 op resource=
+!endif
+ *wlink name aproxime d all SYS nt op m op maxe=25 op q op symf @aproxime.lk&
+1
+

@@ -12,13 +12,13 @@
 
 	write(*,*)i
 
-	c1=5.
-	b1=7.
+	m=2
+	k=3
 	j=0
 
-	do while (c1.ne.b1)
-	b1=b1*2
-	c1=c1*2
+	do while (m.ne.k)
+	m=m*5
+	k=k*7
 	j=j+1
 	end do
 

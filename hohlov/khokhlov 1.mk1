@@ -1,0 +1,21 @@
+!define BLANK ""
+"Z:\Хохлов\77.obj" : "Z:\ХОХЛОВ\77.for" .AUTODEPEND
+ @Z:
+ cd Z:\Хохлов
+ wfc386 "\ХОХЛОВ\77.for" -d2 -q -dep
+
+"Z:\Хохлов\khokhlov 1.exe" : "Z:\Хохлов\77.obj" .AUTODEPEND
+ @Z:
+ cd Z:\Хохлов
+ @%write "khokhlov 1.lk1" FIL 77.obj
+ @%append "khokhlov 1.lk1" 
+!ifneq BLANK ""
+ *wlib -q -n -b "khokhlov 1.imp" 
+ @%append "khokhlov 1.lk1" LIBR 'khokhlov 1.imp'
+!endif
+!ifneq BLANK ""
+ @%append "khokhlov 1.lk1" op resource=
+!endif
+ *wlink name 'khokhlov 1' d all SYS nt op m op maxe=25 op q op symf @'khokhl&
+ov 1.lk1'
+
