@@ -2,8 +2,8 @@ program integral
 real*8 a,b,y,e,d,q
 e=0.000001
 d=0.1
-a=0.
-b=2.
+a=1.
+b=3.
 n=1
 q=b
 do while (((b-a) .gt. e).or.(abs(y(q)/y(b)) .ge. d))
@@ -26,5 +26,5 @@ end
 
 real*8 function y(x)
 real*8 x
-y=exp(x)-4
+y=cos(x)
 end

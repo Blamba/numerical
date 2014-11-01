@@ -11,7 +11,7 @@
 
       do 6 i=2, n
       a(i)=a(i-1)+s
-6     continue  
+6     continue
 
       do 5 i=1, n
       b(i)=1/(a(i)*a(i)+4)

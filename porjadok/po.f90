@@ -1,24 +1,25 @@
-	real*8 b,c,b1,c1
+	real*4 b,c,r,p
+
 
 	c=5.
 	b=7.
 	i=0
 
 	do while (b.ne.c)
-  b=b/2
-	c=c/2
+  b=b/10
+	c=c/10
 	i=i+1
 	end do
 
-	write(*,*)i
+	write(*,*)  -i
 
-	m=2
-	k=3
+	r=5
+	p=7
 	j=0
 
-	do while (m.ne.k)
-	m=m*5
-	k=k*7
+	do while (r.ne.p)
+	r=r*10
+	p=p*10
 	j=j+1
 	end do
 
